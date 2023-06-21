@@ -1,96 +1,103 @@
 $(function () {
-	if ($(".front-prod__bg").length) {
-		let cf = $(".front-prod__bg-circle").first();
-
-		$(".front-prod__left").mousemove(function (event) {
+	var controller = new ScrollMagic.Controller();
+	if ($(".page").length) {
+		$(".page").mousemove(function (event) {
 			let x = event.clientX / window.innerWidth;
 			let y = event.clientY / window.innerHeight;
-			cf.css(
-				"transform",
-				"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
-			);
+			$("._mm").each(function () {
+				$(this).css(
+					"transform",
+					"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
+				);
+			});
+			$("._mm-reverse").each(function () {
+				$(this).css(
+					"transform",
+					"translate(" + x * 130 + "px, " + y * 130 + "px)"
+				);
+			});
 		});
 	}
-	if ($(".front-contract__bg").length) {
-		let cf = $(".front-contract__bg-circle").first();
-		let cl = $(".front-contract__bg-circle").last();
+	// if ($(".front-contract__bg").length) {
+	// 	let cf = $(".front-contract__bg-circle").first();
+	// 	let cl = $(".front-contract__bg-circle").last();
 
-		$(".front-contract__img").mousemove(function (event) {
-			let x = event.clientX / window.innerWidth;
-			let y = event.clientY / window.innerHeight;
-			cf.css(
-				"transform",
-				"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
-			);
-			cl.css(
-				"transform",
-				"translate(" + x * 130 + "px, " + y * 130 + "px)"
-			);
-		});
-	}
-	if ($(".front-where").length) {
-		let cf = $(".front-where__bg-circle").first();
-		let cl = $(".front-where__bg-circle").last();
+	// 	$(".front-contract__img").mousemove(function (event) {
+	// 		let x = event.clientX / window.innerWidth;
+	// 		let y = event.clientY / window.innerHeight;
+	// 		cf.css(
+	// 			"transform",
+	// 			"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
+	// 		);
+	// 		cl.css(
+	// 			"transform",
+	// 			"translate(" + x * 130 + "px, " + y * 130 + "px)"
+	// 		);
+	// 	});
+	// }
+	// if ($(".front-where").length) {
+	// 	let cf = $(".front-where__bg-circle").first();
+	// 	let cl = $(".front-where__bg-circle").last();
 
-		$(".front-where").mousemove(function (event) {
-			let x = event.clientX / window.innerWidth;
-			let y = event.clientY / window.innerHeight;
-			cf.css(
-				"transform",
-				"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
-			);
-			cl.css(
-				"transform",
-				"translate(" + x * 130 + "px, " + y * 130 + "px)"
-			);
-		});
-	}
-	if ($(".front-partners").length) {
-		let cf = $(".front-partners__bg-circle").first();
-		let cl = $(".front-partners__bg-circle").last();
+	// 	$(".front-where").mousemove(function (event) {
+	// 		let x = event.clientX / window.innerWidth;
+	// 		let y = event.clientY / window.innerHeight;
+	// 		cf.css(
+	// 			"transform",
+	// 			"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
+	// 		);
+	// 		cl.css(
+	// 			"transform",
+	// 			"translate(" + x * 130 + "px, " + y * 130 + "px)"
+	// 		);
+	// 	});
+	// }
+	// if ($(".front-partners").length) {
+	// 	let cf = $(".front-partners__bg-circle").first();
+	// 	let cl = $(".front-partners__bg-circle").last();
 
-		$(".front-partners").mousemove(function (event) {
-			let x = event.clientX / window.innerWidth;
-			let y = event.clientY / window.innerHeight;
-			cf.css(
-				"transform",
-				"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
-			);
-			cl.css(
-				"transform",
-				"translate(" + x * 130 + "px, " + y * 130 + "px)"
-			);
-		});
-	}
-	if ($(".front-top").length) {
-		let cf = $(".front-top__bg-circle").first();
-		let cl = $(".front-top__bg-circle").last();
+	// 	$(".front-partners").mousemove(function (event) {
+	// 		let x = event.clientX / window.innerWidth;
+	// 		let y = event.clientY / window.innerHeight;
+	// 		cf.css(
+	// 			"transform",
+	// 			"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
+	// 		);
+	// 		cl.css(
+	// 			"transform",
+	// 			"translate(" + x * 130 + "px, " + y * 130 + "px)"
+	// 		);
+	// 	});
+	// }
+	// if ($(".front-top").length) {
+	// 	let cf = $(".front-top__bg-circle").first();
+	// 	let cl = $(".front-top__bg-circle").last();
 
-		$(".front-top").mousemove(function (event) {
-			let x = event.clientX / window.innerWidth;
-			let y = event.clientY / window.innerHeight;
-			cf.css(
-				"transform",
-				"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
-			);
-			cl.css(
-				"transform",
-				"translate(" + x * 130 + "px, " + y * 130 + "px)"
-			);
-		});
-	}
-	if ($(".front-catalog").length) {
-		let cf = $(".front-catalog__bg-circle").first();
+	// 	$(".front-top").mousemove(function (event) {
+	// 		let x = event.clientX / window.innerWidth;
+	// 		let y = event.clientY / window.innerHeight;
+	// 		cf.css(
+	// 			"transform",
+	// 			"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
+	// 		);
+	// 		cl.css(
+	// 			"transform",
+	// 			"translate(" + x * 130 + "px, " + y * 130 + "px)"
+	// 		);
+	// 	});
+	// }
+	// if ($(".front-catalog").length) {
+	// 	let cf = $(".front-catalog__bg-circle").first();
 
-		$(".front-catalog").mousemove(function (event) {
-			let x = event.clientX / window.innerWidth;
-			let y = event.clientY / window.innerHeight;
-			cf.css(
-				"transform",
-				"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
-			);
-		});
-	}
+	// 	$(".front-catalog").mousemove(function (event) {
+	// 		let x = event.clientX / window.innerWidth;
+	// 		let y = event.clientY / window.innerHeight;
+	// 		cf.css(
+	// 			"transform",
+	// 			"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
+	// 		);
+	// 	});
+	// }
 	if ($(".front-work").length) {
 		const swiper = new Swiper(".front-work__slider", {
 			slidesPerView: 1,
@@ -136,8 +143,40 @@ $(function () {
 	$(".front-top__full-btn").click(function () {
 		$(".front-top").toggleClass("_full-video");
 	});
+	if ($("#front-contract-bottle").length) {
+		var scene = new ScrollMagic.Scene({
+			triggerElement: "#front-contract-bottle",
+			duration: $("#front-contract-bottle").height() * 0.7,
+		})
+			.setTween("#front-contract-bottle", {
+				rotate: 0,
+			})
+
+			.addTo(controller);
+		var scene2 = new ScrollMagic.Scene({
+			triggerElement: "#front-contract-bottle",
+			duration: $("#front-contract-bottle").height() * 0.7,
+		})
+			.setTween("#front-contract-bottle-fill", {
+				rotate: 0,
+				height: "90%",
+			})
+			.addTo(controller);
+	}
+	if ($("#front-where-img").length) {
+		var scene = new ScrollMagic.Scene({
+			triggerElement: "#front-where-img",
+			duration: $("#front-where-img").height() * 1,
+		})
+			.setTween("#front-where-img", {
+				rotate: 0,
+			})
+
+			.addTo(controller);
+	}
 });
 
+$(function(){})
 $(function(){})
 function header() {
 	let header = $(".header");
@@ -174,5 +213,4 @@ $(function () {
 	header();
 });
 
-$(function(){})
 $(function(){})
