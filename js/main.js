@@ -7,13 +7,13 @@ $(function () {
 			$("._mm").each(function () {
 				$(this).css(
 					"transform",
-					"translate(-" + x * 130 + "px, -" + y * 130 + "px)"
+					"translate(-" + x * 60 + "px, -" + y * 60 + "px)"
 				);
 			});
 			$("._mm-reverse").each(function () {
 				$(this).css(
 					"transform",
-					"translate(" + x * 130 + "px, " + y * 130 + "px)"
+					"translate(" + x * 60 + "px, " + y * 60 + "px)"
 				);
 			});
 		});
@@ -177,7 +177,6 @@ $(function () {
 });
 
 $(function(){})
-$(function(){})
 function header() {
 	let header = $(".header");
 	let prevscroll = $(window).scrollTop();
@@ -213,4 +212,5 @@ $(function () {
 	header();
 });
 
+$(function(){})
 $(function(){})
