@@ -140,8 +140,71 @@ $(function () {
 			},
 		});
 	}
+	let full = false;
+	let animate = false;
+	let bg = $(".front-top__left");
+	var body = $("html, body");
+	let wrap = $(".front-top__left-wrap");
 	$(".front-top__full-btn").click(function () {
-		$(".front-top").toggleClass("_full-video");
+		console.log(animate, "animate");
+		if (!animate) {
+			animate = true;
+			if (full) {
+				$(".front-top").removeClass("_full-video");
+				gsap.to(".front-top__left", {
+					width: wrap.innerWidth(),
+					height: wrap.innerHeight(),
+					top: 0,
+					left: 0,
+					borderRadius: "15px",
+					duration: 0.33,
+					// ease: "linear",
+					onComplete: function () {
+						setTimeout(function () {
+							console.log("xxxz");
+							animate = false;
+							full = false;
+							$("body").removeClass("_no-scroll");
+							bg.removeClass("_transition");
+							setTimeout(function () {
+								$(".load-anim").addClass("_animate");
+							});
+						}, 200);
+					},
+				});
+			} else {
+				$(".front-top").addClass("_full-video");
+
+				body.stop().animate(
+					{ scrollTop: 0 },
+					100,
+					"swing",
+					function () {
+						$("body").addClass("_no-scroll");
+					}
+				);
+				full = true;
+				bg.addClass("_full");
+				gsap.to(".front-top__left", {
+					width: window.innerWidth,
+					height: window.innerHeight,
+					top: -1 * wrap.offset().top,
+					left: -1 * wrap.offset().left,
+					borderRadius: 0,
+					duration: 0.33,
+					// ease: "linear",
+					onComplete: function () {
+						setTimeout(function () {
+							console.log("ttts");
+							animate = false;
+							if (animate) {
+								bg.addClass("_animate");
+							}
+						}, 200);
+					},
+				});
+			}
+		}
 	});
 	if ($("#front-contract-bottle").length) {
 		var scene = new ScrollMagic.Scene({
@@ -177,6 +240,8 @@ $(function () {
 });
 
 $(function(){})
+$(function(){})
+$(function(){})
 function header() {
 	let header = $(".header");
 	let prevscroll = $(window).scrollTop();
@@ -211,6 +276,3 @@ function header() {
 $(function () {
 	header();
 });
-
-$(function(){})
-$(function(){})
