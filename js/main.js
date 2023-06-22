@@ -129,6 +129,19 @@ $(function () {
 			},
 		});
 	}
+	if ($(".front-top__item-img-slider").length) {
+		// $(".front-top__item-img-slider").each(function () {
+		// 	const swiper = new Swiper(this, {
+		// 		slidesPerView: 1,
+		// 		spaceBetween: 16,
+		// 		loop: true,
+		// 		speed: 700,
+		// 		autoplay: {
+		// 			delay: 3000,
+		// 		},
+		// 	});
+		// });
+	}
 	if ($(".front-top").length) {
 		const swiper = new Swiper(".front-top__slider", {
 			slidesPerView: 1,
@@ -239,7 +252,44 @@ $(function () {
 	}
 });
 
-$(function(){})
+$(function () {
+	let offset = window.innerWidth < 600 ? 60 : 120;
+	AOS.init({
+		// Global settings:
+		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+		initClassName: "aos-init", // class applied after initialization
+		animatedClassName: "aos-animate", // class applied on animation
+		useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+		disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+		debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+		throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+		offset: offset, // offset (in px) from the original trigger point
+		delay: 0, // values from 0 to 3000, with step 50ms
+		duration: 800, // values from 0 to 3000, with step 50ms
+		easing: "ease", // default easing for AOS animations
+		once: true, // whether animation should happen only once - while scrolling down
+		mirror: false, // whether elements should animate out while scrolling past them
+		anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+	});
+	document.addEventListener("aos:in", ({ detail }) => {
+		console.log(detail.hasAttribute("data-speed"), detail);
+		if (detail.hasAttribute("data-count")) {
+			let count = $(detail).data("count");
+			let i = 0;
+			let interval = setInterval(function () {
+				i++;
+				$(detail).text(i);
+				if (i >= count) {
+					clearInterval(interval);
+				}
+			}, $(detail).data("speed"));
+		}
+	});
+});
+
 $(function(){})
 $(function(){})
 function header() {
@@ -276,3 +326,5 @@ function header() {
 $(function () {
 	header();
 });
+
+$(function(){})
