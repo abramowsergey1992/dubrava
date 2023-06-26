@@ -100,7 +100,7 @@ $(function () {
 	// }
 	if ($(".front-work").length) {
 		const swiper = new Swiper(".front-work__slider", {
-			slidesPerView: 1,
+			slidesPerView: "auto",
 			spaceBetween: 16,
 			navigation: {
 				nextEl: $(".front-work__next")[0],
@@ -120,9 +120,23 @@ $(function () {
 		});
 	}
 	if ($(".front-news").length) {
+		let slideWrapper = $(".front-news__swiper .swiper-wrapper");
+		$(".front-news__slide-column").each(function () {
+			$(this)
+				.find(".front-news__item")
+				.each(function () {
+					console.log(this);
+					slideWrapper.append(
+						`<div class="swiper-slide front-news__slide-mob"><div class="front-news__item _br">${$(
+							this
+						).html()}</div></div>`
+					);
+				});
+		});
 		const swiper = new Swiper(".front-news__swiper", {
 			slidesPerView: "auto",
 			spaceBetween: 16,
+
 			navigation: {
 				nextEl: $(".front-news__next")[0],
 				prevEl: $(".front-news__prev")[0],
@@ -278,11 +292,16 @@ $(function () {
 		console.log(detail.hasAttribute("data-speed"), detail);
 		if (detail.hasAttribute("data-count")) {
 			let count = $(detail).data("count");
+			$(detail).css({
+				width: $(detail).width(),
+				height: $(detail).height(),
+			});
 			let i = 0;
 			let interval = setInterval(function () {
 				i++;
 				$(detail).text(i);
 				if (i >= count) {
+					$(detail).removeAttr("style");
 					clearInterval(interval);
 				}
 			}, $(detail).data("speed"));
@@ -291,19 +310,27 @@ $(function () {
 });
 
 $(function(){})
-$(function(){})
 function header() {
 	let header = $(".header");
 	let prevscroll = $(window).scrollTop();
 	// if (isFront) {
 	// 	prevscroll = window.innerHeight * 2;
 	// }
-
+	$(".header__mob-menu").html($(".header__menu").html());
 	if (prevscroll > 5) {
 		header.addClass("_bg");
 	} else {
 		header.removeClass("_bg");
 	}
+	$(".header__burger").click(function () {
+		$("body").toggleClass("_header-open");
+	});
+	$(".header__mob-menu a").click(function (e) {
+		if ($(this).parent("li").find(".header__sub-menu").length) {
+			e.preventDefault();
+			$(this).parent("li").toggleClass("_open");
+		}
+	});
 	$(window).scroll(() => {
 		let currentScroll = $(window).scrollTop();
 
@@ -327,4 +354,5 @@ $(function () {
 	header();
 });
 
+$(function(){})
 $(function(){})

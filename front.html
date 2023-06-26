@@ -19,23 +19,24 @@
   </head>
   <body>   
     <div class="page">
-      <header class="header"> 
+      <header class="header">
         <div class="inner"> 
-          <div class="header__row"> <a class="header__logo" href="/"><img src="img/logo.svg" alt=""></a>
+          <div class="header__row"> <a class="header__logo" href="/"><picture>
+<source srcset="img/logo-min.svg" media="(max-width: 700px)">
+<img srcset="img/logo.svg">
+</picture></a>
             <div class="header__menu-wrap">
               <ul class="header__menu">
                 <li> <a href="#">О нас</a>
                   <ul class="header__sub-menu">
-                    <li><a href="#">О нас 1</a></li>
-                    <li><a href="#">О нас 2</a></li>
-                    <li><a href="#">О нас 3</a></li>
-                    <li><a href="#">О нас 4</a></li>
+                    <li><a href="#">Производство</a></li>
+                    <li><a href="#">Карьера</a></li>
                   </ul>
                 </li>
                 <li> <a href="#">Каталог</a>
                   <ul class="header__sub-menu">
+                    <li><a href="#">Медецинские изделия</a></li>
                     <li><a href="#">Лекарственные средства</a></li>
-                    <li><a href="#">Коллагеновые изделия</a></li>
                     <li><a href="#">Косметическая продукция</a></li>
                   </ul>
                 </li>
@@ -58,8 +59,19 @@
                   <li><a href="#">Eng</a></li>
                 </ul>
               </div><a class="header__phone" href="tel:+74955042550">+7 495 504-25-50</a>
+              <div class="header__burger"> </div>
             </div>
           </div>
+        </div>
+        <div class="inner header__mob-content">
+          <div class="header__mob-menu"></div><a class="header__phone" href="tel:+74955042550">+7 495 504-25-50</a>
+          <div class="header__socials"> <a class="header__social-link" href="#"><svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.9601 1.54692L11.8474 11.3058C11.688 11.9946 11.2724 12.166 10.6817 11.8415L7.46265 9.51811L5.90939 10.9813C5.7375 11.1497 5.59374 11.2905 5.26246 11.2905L5.49373 8.07938L11.4599 2.79893C11.7193 2.5724 11.4036 2.4469 11.0567 2.67342L3.68107 7.22226L0.505785 6.24882C-0.184902 6.0376 -0.197403 5.57231 0.649547 5.24783L13.0694 0.561241C13.6445 0.350023 14.1476 0.686747 13.9601 1.54692Z" fill="#424242"/>
+</svg></a><a class="header__social-link" href="#"><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.50959 9.49534C9.0089 9.49534 9.0089 8.77521 9.0089 8.49585C9.0089 7.99611 9.50822 7.49637 10.0075 7.49637C10.5068 7.49637 11.3632 8.35343 12.0048 8.99559C12.5041 9.49534 12.5041 9.49534 13.0034 9.49534C13.5027 9.49534 14.5014 9.49534 14.5014 9.49534C14.5014 9.49534 15.5 9.45736 15.5 8.49585C15.5 8.18352 15.158 7.65379 14.0021 6.49689C13.0034 5.49741 12.4911 6.01364 14.0021 3.99819C14.9223 2.77082 15.5919 1.6589 15.477 1.33807C15.3672 1.03172 12.8077 0.543977 12.5041 0.999741C11.5055 2.49896 11.3222 2.86627 11.0062 3.49845C10.5068 4.49793 10.4574 4.99767 10.0075 4.99767C9.55366 4.99767 9.50822 4.02767 9.50822 3.49845C9.50822 1.8463 9.74739 0.677908 9.0089 0.5C9.0089 0.5 8.01027 0.5 7.51096 0.5C6.70706 0.5 6.01301 0.999741 6.01301 0.999741C6.01301 0.999741 5.39336 1.48349 5.5137 1.49948C5.6625 1.51947 6.51233 1.29259 6.51233 1.99922C6.51233 2.49896 6.51233 2.9987 6.51233 2.9987C6.51233 2.9987 6.51682 4.99767 6.01301 4.99767C5.5137 4.99767 4.51507 2.9987 3.51644 1.49948C3.12448 0.911287 3.01712 0.999741 2.51781 0.999741C1.98254 0.999741 1.51968 1.02073 1.01986 1.02073C0.520549 1.02073 0.456636 1.33906 0.520549 1.49948C1.51918 3.99819 2.23669 5.56737 4.13409 7.54435C5.8742 9.35791 7.03661 9.45436 8.01027 9.49534C8.25993 9.50583 8.01027 9.49534 8.50959 9.49534Z" fill="#424242"/>
+</svg></a><a class="header__social-link" href="#"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.92553 9.12997C7.1693 9.6056 6.12879 9.79422 5.44155 9.86529L6.01839 10.4284L8.12425 12.5141C8.89428 13.2959 7.64125 14.5177 6.86294 13.7633C6.33578 13.233 5.56299 12.4676 4.75708 11.6694L2.65122 13.7606C1.87291 14.5123 0.619882 13.2795 1.39819 12.5113C1.93363 11.981 2.69814 11.2156 3.50405 10.4257L4.07261 9.86255C3.39365 9.79148 2.33658 9.6138 1.57207 9.12724C0.672321 8.5532 0.277645 8.21697 0.625402 7.51446C0.82964 7.11536 1.38991 6.77914 2.13235 7.35865C2.13235 7.35865 3.13422 8.14864 4.75156 8.14864C6.3689 8.14864 7.37077 7.35865 7.37077 7.35865C8.11321 6.78187 8.67072 7.11536 8.87772 7.51446C9.21996 8.21697 8.82528 8.5532 7.92553 9.12997ZM1.16912 3.54538C1.16912 1.58544 2.77818 0 4.7488 0C6.71942 0 8.32848 1.58544 8.32848 3.54538C8.32848 5.49712 6.71942 7.08256 4.7488 7.08256C2.77818 7.08256 1.16912 5.49712 1.16912 3.54538ZM2.9907 3.54538C2.9907 4.50485 3.78005 5.28664 4.7488 5.28664C5.71755 5.28664 6.5069 4.50485 6.5069 3.54538C6.5069 2.57771 5.71755 1.79593 4.7488 1.79593C3.78005 1.79593 2.9907 2.57771 2.9907 3.54538Z" fill="#424242"/>
+</svg></a></div>
         </div>
       </header>
       <div class="container">
@@ -191,7 +203,7 @@
               </div>
               <div class="front-numbers__item">
                 <div class="front-numbers__item-head">Портфель</div>
-                <div class="front-numbers__item-title"> <span data-count="1000" data-speed="1" data-aos>1000</span>+</div>
+                <div class="front-numbers__item-title"> <span data-count="1000" data-speed="0.5" data-aos>1000</span>+</div>
                 <div class="front-numbers__item-desc">готовых рецептур</div>
               </div>
               <div class="front-numbers__item">
@@ -277,15 +289,21 @@
               <div class="front-catalog__bg-circle _mm"></div>
             </div>
             <div class="front-catalog__grid">
-              <div class="front-catalog__item _br"> 
-                <picture>
-                  <source type="image/webp" srcset="img/fc-1.webp"/><img class="front-catalog__img" alt="" src="img/fc-1.jpg"/>
-                </picture><a class="h2" href="#">Коллагеновая<br>продукция</a>
+              <div class="front-catalog__item _br">
+                 <picture class="front-catalog__img">
+<source  type="image/webp" srcset="img/fc-1m.webp" media="(max-width: 992px)">
+<source  type="image/jpg" srcset="img/fc-1m.jpg"   media="(max-width: 992px)">
+<source type="image/webp" srcset="img/fc-1.webp">
+<img srcset="img/fc-1.jpg">
+</picture><a class="h2" href="#">Коллагеновая<br>продукция</a>
               </div>
-              <div class="front-catalog__item _br"> 
-                <picture>
-                  <source type="image/webp" srcset="img/fc-2.webp"/><img class="front-catalog__img" alt="" src="img/fc-2.jpg"/>
-                </picture><a class="h2" href="#">Лекарственные<br>средства</a>
+              <div class="front-catalog__item _br">
+                 <picture class="front-catalog__img">
+<source  type="image/webp" srcset="img/fc-2m.webp" media="(max-width: 992px)">
+<source  type="image/jpg" srcset="img/fc-2m.jpg"   media="(max-width: 992px)">
+<source type="image/webp" srcset="img/fc-2.webp">
+<img srcset="img/fc-2.jpg">
+</picture><a class="h2" href="#">Лекарственные<br>средства</a>
               </div>
               <div class="front-catalog__item _br"> 
                 <picture>
@@ -464,55 +482,6 @@
                     </div><a class="front-news__item-link" href="#"> </a>
                   </div>
                 </div>
-                <div class="swiper-slide front-news__slide-one">
-                  <div class="front-news__item _br">
-                    <div class="front-news__item-content">
-                      <div class="front-news__item-head">
-                        <div class="front-news__item-date">11 апреля 2023</div>
-                        <div class="front-news__item-type">Событие</div>
-                      </div>
-                      <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
-                      <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
-                    </div>
-                    <div class="front-news__item-img-wrap">
-                      <picture>
-                        <source type="image/webp" srcset="img/f-news-1.webp"/><img class="_br" alt="" src="img/f-news-1.jpg"/>
-                      </picture>
-                    </div><a class="front-news__item-link" href="#"> </a>
-                  </div>
-                </div>
-                <div class="swiper-slide front-news__slide-column">
-                  <div class="front-news__item _br">
-                    <div class="front-news__item-content">
-                      <div class="front-news__item-head">
-                        <div class="front-news__item-date">24 марта 2023</div>
-                        <div class="front-news__item-type">Новости</div>
-                      </div>
-                      <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
-                      <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
-                    </div>
-                    <div class="front-news__item-img-wrap">
-                      <picture>
-                        <source type="image/webp" srcset="img/f-news-2.webp"/><img class="_br" alt="" src="img/f-news-2.jpg"/>
-                      </picture>
-                    </div><a class="front-news__item-link" href="#"> </a>
-                  </div>
-                  <div class="front-news__item _br">
-                    <div class="front-news__item-content">
-                      <div class="front-news__item-head">
-                        <div class="front-news__item-date">2 марта 2023</div>
-                        <div class="front-news__item-type">Новости</div>
-                      </div>
-                      <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
-                      <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
-                    </div>
-                    <div class="front-news__item-img-wrap">
-                      <picture>
-                        <source type="image/webp" srcset="img/f-news-3.webp"/><img class="_br" alt="" src="img/f-news-3.jpg"/>
-                      </picture>
-                    </div><a class="front-news__item-link" href="#"> </a>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="front-news__bottom"> 
@@ -602,17 +571,14 @@
                   <big>Также Вы можете стать нашим официальным партнером – мы будем очень рады совместному сотрудничеству.</big>
                 </p>
                 <p><a class="btn-border" href="#">Подробнее </a></p>
-              </div>
+              </div><img class="front-where__img" id="front-where-img" alt="" src="img/where.webp">
               <div class="front-where__right">
                 <ul> 
                   <li> <a href="#">Лекарственные<br> средства</a></li>
                   <li> <a href="#">Медицинские <br>изделия</a></li>
                   <li> <a href="#">Косметическая<br> продукция</a></li>
                 </ul>
-              </div><picture>
-<source type="image/webp" srcset="img/where.webp">
-<img class="front-where__img" id="front-where-img" alt="" src="img/where.png">
-</picture>
+              </div>
             </div>
           </div>
         </div>
