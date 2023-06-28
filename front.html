@@ -22,8 +22,7 @@
       <header class="header">
         <div class="inner"> 
           <div class="header__row"> <a class="header__logo" href="/"><picture>
-<source srcset="img/logo-min.svg" media="(max-width: 700px)">
-<img srcset="img/logo.svg">
+<img data-menu="img/logo-min.svg" data-main="img/logo.svg" src="img/logo.svg">
 </picture></a>
             <div class="header__menu-wrap">
               <ul class="header__menu">
@@ -35,8 +34,8 @@
                 </li>
                 <li> <a href="#">Каталог</a>
                   <ul class="header__sub-menu">
-                    <li><a href="#">Медецинские изделия</a></li>
                     <li><a href="#">Лекарственные средства</a></li>
+                    <li><a href="#">Медицинские изделия</a></li>
                     <li><a href="#">Косметическая продукция</a></li>
                   </ul>
                 </li>
@@ -133,21 +132,9 @@
                   <div class="front-top__item-img">
                     <div class="swiper front-top__item-img-slider">
                       <div class="swiper-wrapper"> 
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="img/k-1.webp"/><img alt="" src="img/k-1.png"/>
-                          </picture>
-                        </div>
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="img/k-2.webp"/><img alt="" src="img/k-2.png"/>
-                          </picture>
-                        </div>
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="img/k-3.webp"/><img alt="" src="img/k-3.png"/>
-                          </picture>
-                        </div>
+                        <div class="swiper-slide"><img src="img/k-1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="img/k-2.png" alt=""></div>
+                        <div class="swiper-slide"><img src="img/k-3.png" alt=""></div>
                       </div>
                     </div>
                   </div>
@@ -167,16 +154,8 @@
                   <div class="front-top__item-img">
                     <div class="swiper front-top__item-img-slider">
                       <div class="swiper-wrapper"> 
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="img/pr-1.webp"/><img alt="" src="img/pr-1.png"/>
-                          </picture>
-                        </div>
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="img/pr-2.webp"/><img alt="" src="img/pr-2.png"/>
-                          </picture>
-                        </div>
+                        <div class="swiper-slide"><img src="img/pr-1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="img/pr-2.png" alt=""></div>
                       </div>
                     </div>
                   </div>
@@ -221,10 +200,12 @@
           <div class="front-work block" data-aos="fade-up">
             <div class="front-work__head">
               <div>
-                <div class="h1">Здоровье, красота, забота — наша работа!</div>
+                <div class="h1 front-work__title">Здоровье, красота, забота <br>— наша работа!</div>
               </div>
               <div>
-                <p> Мы создаем <b>современные и востребованные </b>лекарственные средства, медицинские изделия и косметическую продукцию для красоты, здоровья и улучшения качества жизни людей!</p>
+                <p>
+                  <big>Мы создаем <b>современные и востребованные </b>лекарственные средства, медицинские изделия и косметическую продукцию для красоты, здоровья и улучшения качества жизни людей!</big>
+                </p>
               </div>
             </div>
             <div class="front-work__slider swiper"> 
@@ -290,24 +271,24 @@
             </div>
             <div class="front-catalog__grid">
               <div class="front-catalog__item _br">
-                 <picture class="front-catalog__img">
-<source  type="image/webp" srcset="img/fc-1m.webp" media="(max-width: 992px)">
-<source  type="image/jpg" srcset="img/fc-1m.jpg"   media="(max-width: 992px)">
-<source type="image/webp" srcset="img/fc-1.webp">
-<img srcset="img/fc-1.jpg">
-</picture><a class="h2" href="#">Коллагеновая<br>продукция</a>
-              </div>
-              <div class="front-catalog__item _br">
-                 <picture class="front-catalog__img">
+                 <picture >
 <source  type="image/webp" srcset="img/fc-2m.webp" media="(max-width: 992px)">
 <source  type="image/jpg" srcset="img/fc-2m.jpg"   media="(max-width: 992px)">
 <source type="image/webp" srcset="img/fc-2.webp">
-<img srcset="img/fc-2.jpg">
+<img srcset="img/fc-2.png" class="front-catalog__img">
 </picture><a class="h2" href="#">Лекарственные<br>средства</a>
+              </div>
+              <div class="front-catalog__item _br">
+                 <picture >
+<source  type="image/webp" srcset="img/fc-1m.webp" media="(max-width: 992px)">
+<source  type="image/jpg" srcset="img/fc-1m.jpg"   media="(max-width: 992px)">
+<source type="image/webp" srcset="img/fc-1.webp">
+<img srcset="img/fc-1.png" class="front-catalog__img">
+</picture><a class="h2" href="#">Медицинские<br>продукция</a>
               </div>
               <div class="front-catalog__item _br"> 
                 <picture>
-                  <source type="image/webp" srcset="img/fc-3.webp"/><img class="front-catalog__img" alt="" src="img/fc-3.jpg"/>
+                  <source type="image/webp" srcset="img/fc-3.webp"/><img class="front-catalog__img" alt="" src="img/fc-3.png"/>
                 </picture><a class="h2" href="#">Косметическая<br>продукция</a>
               </div>
             </div>
@@ -421,7 +402,10 @@
                 </div>
                 <div class="front-prod__content">
                   <div class="h1">Производство коллагеновых продуктов </div>
-                  <p>Мы производим медицинские изделия и косметическую продукцию на основе нативного трехспирального коллагена I типа методом лиофилизации</p><a class="btn-fill _white" href="#">Подробнее </a>
+                  <p>
+                    <big>
+                      Мы производим медицинские изделия и косметическую продукцию на основе нативного трехспирального коллагена I типа методом лиофилизации</big>
+                  </p><a class="btn-fill _white" href="#">Подробнее </a>
                 </div>
               </div>
               <div class="front-prod__right _br"> 
@@ -438,7 +422,6 @@
                     <div class="front-news__item-content">
                       <div class="front-news__item-head">
                         <div class="front-news__item-date">11 апреля 2023</div>
-                        <div class="front-news__item-type">Событие</div>
                       </div>
                       <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
                       <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
@@ -455,7 +438,6 @@
                     <div class="front-news__item-content">
                       <div class="front-news__item-head">
                         <div class="front-news__item-date">24 марта 2023</div>
-                        <div class="front-news__item-type">Новости</div>
                       </div>
                       <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
                       <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
@@ -470,7 +452,52 @@
                     <div class="front-news__item-content">
                       <div class="front-news__item-head">
                         <div class="front-news__item-date">2 марта 2023</div>
-                        <div class="front-news__item-type">Новости</div>
+                      </div>
+                      <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
+                      <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
+                    </div>
+                    <div class="front-news__item-img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="img/f-news-3.webp"/><img class="_br" alt="" src="img/f-news-3.jpg"/>
+                      </picture>
+                    </div><a class="front-news__item-link" href="#"> </a>
+                  </div>
+                </div>
+                <div class="swiper-slide front-news__slide-one">
+                  <div class="front-news__item _br">
+                    <div class="front-news__item-content">
+                      <div class="front-news__item-head">
+                        <div class="front-news__item-date">11 апреля 2023</div>
+                      </div>
+                      <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
+                      <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
+                    </div>
+                    <div class="front-news__item-img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="img/f-news-1.webp"/><img class="_br" alt="" src="img/f-news-1.jpg"/>
+                      </picture>
+                    </div><a class="front-news__item-link" href="#"> </a>
+                  </div>
+                </div>
+                <div class="swiper-slide front-news__slide-column">
+                  <div class="front-news__item _br">
+                    <div class="front-news__item-content">
+                      <div class="front-news__item-head">
+                        <div class="front-news__item-date">24 марта 2023</div>
+                      </div>
+                      <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
+                      <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
+                    </div>
+                    <div class="front-news__item-img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="img/f-news-2.webp"/><img class="_br" alt="" src="img/f-news-2.jpg"/>
+                      </picture>
+                    </div><a class="front-news__item-link" href="#"> </a>
+                  </div>
+                  <div class="front-news__item _br">
+                    <div class="front-news__item-content">
+                      <div class="front-news__item-head">
+                        <div class="front-news__item-date">2 марта 2023</div>
                       </div>
                       <h3>Первая фармацевтическая субстанция производства ЗАО «Зеленая дубрава» включена в государственный реестр ЛС</h3>
                       <p>Министерством здравоохранения Российской Федерации по результатам проведенной экспертизы принято решение о включении фармацевтической субстанции "Коллаген" производства ЗАО "Зеленая дубрава" в государственный реестр лекарственных средств.</p>
