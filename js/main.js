@@ -144,6 +144,15 @@ $(function () {
 		});
 	}
 	if ($(".front-top__item-img-slider").length) {
+		const swiper2 = new Swiper(
+			$(".front-top__item").last().find(".front-top__item-img-slider")[0],
+			{
+				slidesPerView: 1,
+				spaceBetween: 16,
+				loop: true,
+				speed: 700,
+			}
+		);
 		const swiper = new Swiper(
 			$(".front-top__item")
 				.first()
@@ -156,34 +165,39 @@ $(function () {
 				autoplay: {
 					delay: 3000,
 				},
+				on: {
+					slideChange: function () {
+						setTimeout(function () {
+							swiper2.slideNext();
+						}, 1500);
+					},
+				},
 			}
 		);
-
-		setTimeout(function () {
-			const swiper = new Swiper(
-				$(".front-top__item")
-					.last()
-					.find(".front-top__item-img-slider")[0],
-				{
-					slidesPerView: 1,
-					spaceBetween: 16,
-					loop: true,
-					speed: 700,
-					autoplay: {
-						delay: 3000,
-					},
-				}
-			);
-		}, 1500);
 	}
 	if ($(".front-top").length) {
 		const swiper = new Swiper(".front-top__slider", {
 			slidesPerView: 1,
 			loop: true,
+			autoHeight: true,
 			spaceBetween: 16,
 			navigation: {
 				nextEl: $(".front-top__slider-right")[0],
 				prevEl: $(".front-top__slider-left")[0],
+			},
+			on: {
+				slideChange: function (swiper) {
+					console.log("!!!!", swiper.realIndex);
+					$(".front-top__left-slide").removeClass("_prev");
+					$(".front-top__left-slide._active")
+						.addClass("_prev")
+						.removeClass("_active");
+					$(
+						`.front-top__left-slide[data-slide="${swiper.realIndex}"]`
+					)
+						.addClass("_active")
+						.removeClass("_prev");
+				},
 			},
 		});
 	}
@@ -346,8 +360,6 @@ $(function () {
 });
 
 $(function(){})
-$(function(){})
-$(function(){})
 function header() {
 	let header = $(".header");
 	let prevscroll = $(window).scrollTop();
@@ -397,3 +409,6 @@ function header() {
 $(function () {
 	header();
 });
+
+$(function(){})
+$(function(){})
