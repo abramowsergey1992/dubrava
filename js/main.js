@@ -242,7 +242,7 @@ $(function () {
 	if ($("#front-contract-bottle").length) {
 		var scene = new ScrollMagic.Scene({
 			triggerElement: "#front-contract-bottle",
-			duration: $("#front-contract-bottle").height() * 0.7,
+			duration: $("#front-contract-bottle").height() * 0.8,
 		})
 			.setTween("#front-contract-bottle", {
 				rotate: 0,
@@ -251,7 +251,7 @@ $(function () {
 			.addTo(controller);
 		var scene2 = new ScrollMagic.Scene({
 			triggerElement: "#front-contract-bottle",
-			duration: $("#front-contract-bottle").height() * 0.7,
+			duration: $("#front-contract-bottle").height() * 0.8,
 		})
 			.setTween("#front-contract-bottle-fill", {
 				rotate: 0,
@@ -307,6 +307,11 @@ $(function () {
 	document.addEventListener("aos:in", ({ detail }) => {
 		console.log(detail.hasAttribute("data-speed"), detail);
 		if (detail.hasAttribute("data-count")) {
+			let step;
+			detail.hasAttribute("data-step")
+				? (step = $(detail).data("step"))
+				: (step = 1);
+			console.log("stp", step, detail);
 			let count = $(detail).data("count");
 			$(detail).css({
 				width: $(detail).width(),
@@ -314,9 +319,10 @@ $(function () {
 			});
 			let i = 0;
 			let interval = setInterval(function () {
-				i++;
+				i += step;
 				$(detail).text(i);
 				if (i >= count) {
+					$(detail).text(count);
 					$(detail).removeAttr("style");
 					clearInterval(interval);
 				}
@@ -325,6 +331,7 @@ $(function () {
 	});
 });
 
+$(function(){})
 $(function(){})
 function header() {
 	let header = $(".header");
@@ -376,5 +383,4 @@ $(function () {
 	header();
 });
 
-$(function(){})
 $(function(){})
