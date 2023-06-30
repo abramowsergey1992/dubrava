@@ -268,9 +268,10 @@ $(function () {
 		}
 	});
 	if ($("#front-contract-bottle").length) {
+		console.log($("#front-contract-bottle").height() * 1.1);
 		var scene = new ScrollMagic.Scene({
 			triggerElement: "#front-contract-bottle",
-			duration: $("#front-contract-bottle").height() * 1.1,
+			duration: 600,
 		})
 			.setTween("#front-contract-bottle", {
 				rotate: 0,
@@ -279,7 +280,7 @@ $(function () {
 			.addTo(controller);
 		var scene2 = new ScrollMagic.Scene({
 			triggerElement: "#front-contract-bottle",
-			duration: $("#front-contract-bottle").height() * 0.9,
+			duration: 550,
 		})
 			.setTween("#front-contract-bottle-fill", {
 				rotate: 0,
