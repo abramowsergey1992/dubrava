@@ -270,7 +270,7 @@ $(function () {
 	if ($("#front-contract-bottle").length) {
 		var scene = new ScrollMagic.Scene({
 			triggerElement: "#front-contract-bottle",
-			duration: $("#front-contract-bottle").height() * 0.8,
+			duration: $("#front-contract-bottle").height() * 1.1,
 		})
 			.setTween("#front-contract-bottle", {
 				rotate: 0,
@@ -279,7 +279,7 @@ $(function () {
 			.addTo(controller);
 		var scene2 = new ScrollMagic.Scene({
 			triggerElement: "#front-contract-bottle",
-			duration: $("#front-contract-bottle").height() * 0.8,
+			duration: $("#front-contract-bottle").height() * 0.9,
 		})
 			.setTween("#front-contract-bottle-fill", {
 				rotate: 0,
@@ -360,6 +360,7 @@ $(function () {
 });
 
 $(function(){})
+$(function(){})
 function header() {
 	let header = $(".header");
 	let prevscroll = $(window).scrollTop();
@@ -410,5 +411,4 @@ $(function () {
 	header();
 });
 
-$(function(){})
 $(function(){})
